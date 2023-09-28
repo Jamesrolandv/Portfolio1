@@ -7,7 +7,7 @@
 }
 
 body{
-    background: linear-gradient(20deg, #35916d 50%, #ffffff 140%);
+    background: linear-gradient(20deg, #ffffff62 -140%, #35916d 50%, #ffffff 140%);
     background-attachment: fixed;  
 }
 
@@ -93,10 +93,12 @@ nav{
 }
 .left-side{
     position: sticky;
+    border-radius: .2rem;
     top: 60px;
     align-self: flex-start;
     background: #ffffff62;
     min-width: none;
+    overflow: hidden;
 }
 .right-side{
     position: sticky;
@@ -104,7 +106,7 @@ nav{
     align-self: flex-start;
     background: #ffffff62;
     padding: 20px;
-    border-radius: 1rem;
+    border-radius: .2rem;
     min-width: none;
 }
 .main-content{
@@ -116,9 +118,7 @@ nav{
     text-decoration: none;
     display: flex;
     color: #333333;
-    width: 100%;
-    padding-right: 60px;
-    padding-block: 10px;
+    padding: 10px 60px 10px 10px;
     align-items: center;
     gap: 10px;
     transition: all 400ms ease;
@@ -193,7 +193,7 @@ button {
     text-align: center;
     position: relative;
     overflow: hidden;
-    box-shadow: 0 0 10px rgba(0, 0green, 0, 0.1);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 .event p{
     font-size: 12px;
@@ -269,17 +269,38 @@ button {
 .all-story{
     position: relative;
     display: grid;
-    grid-auto-flow: row;
-    grid-auto-columns: 1fr;
+    grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
     justify-content: center;
     background-image: radial-gradient(transparent, #ffffff62);
     place-items: center;
     border-radius: 5px;
     perspective: 50cm;
-    perspective-origin: center;
 }
-
+iframe{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+}
+.overlay{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    background-image: linear-gradient(transparent, rgba(0,0,0,0.5));
+    transition: 800ms ease;
+}
+.overlay2{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    background-image: radial-gradient(transparent 60%, rgba(0,0,0,0.7) 120%);
+    opacity: 0;
+    transition: 800ms ease;
+}
 .slide{
+    position: relative;
     box-shadow: 0 0 20px;    
     height: 20rem;
     display: flex;
@@ -287,29 +308,20 @@ button {
     cursor: pointer;
     border: #333333 solid 2px;
     scale: 80%;
-    transition: 500ms ease-out;
-    
+    transition: 500ms ease-out;    
 }
 .slide:hover {
     box-shadow: 0 30px 30px;
-    rotate: x 30deg;
-    
+    rotate: x 30deg;    
 }
 .slide:hover.slide img{
-    transform: translateY(-50px);
     rotate: x -30deg;
+    scale: 1.2;
+    top: 30%;
     opacity: 1;
 }
-.slide::before{
-    content: '';
-    position: absolute;
-    background: radial-gradient(transparent 60%, rgba(0,0,0,0.7));
-    inset: 0;
-    z-index: 100;
-    opacity: 0;
-    transition: 800ms ease;
-}
-.slide:hover::before{
+
+.slide:hover .overlay2{
     opacity: 1;
 }
 
@@ -320,24 +332,9 @@ button {
     background-size: cover;
     border-radius: 10px;
 }
-.first{
-    background-image: linear-gradient(transparent, rgba(0,0,0,0.5)), url('');
-}
-
-.second{
-    background-image: linear-gradient(transparent, rgba(0,0,0,0.5)), url('Images/second arc.jpg');
-}
-
-.third{
-    background-image: linear-gradient(transparent, rgba(0,0,0,0.5)), url('Images/third arc.jpg');
-}
-
-.fourth{
-    background-image: linear-gradient(transparent, rgba(0,0,0,0.5)), url('Images/fourth arc.jpg');
-}
-
 .slide img{
     position: absolute;
+    top: 50%;
     width: 100%;
     opacity: 0;
     transition: 500ms ease 200ms;
@@ -345,13 +342,12 @@ button {
 
 .slide p{
     position: absolute;
-    bottom: 0;
+    bottom: 10px;
+    margin-inline: auto;
     width: 100%;
     text-align: center;
     color: whitesmoke;
     font-size: 14px;
-    padding-top: 100%;
-    padding-bottom: 10px;
     transition: 700ms ease;
     z-index: 100;
 }
@@ -588,9 +584,7 @@ span{
     #Ethics{
         background-position-x: 60%;
     }
-    .all-story{
-        grid-auto-columns: calc((100% / 2) - 9px);
-        overflow-x: scroll;
+    .photo-container{
+        width: 100%;
     }
-
 }

@@ -7,7 +7,7 @@
 }
 
 body{
-    background: url('Images/background.jpg');
+    background: linear-gradient(20deg, #35916d 50%, #ffffff 140%);
     background-attachment: fixed;  
 }
 
@@ -15,25 +15,15 @@ nav{
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background-image: repeating-linear-gradient(45deg, lightyellow, yellow, red, yellow, red,yellow,red,yellow,lightyellow);
-    background-size: 400%;
-    animation: bg-animation 20s infinite alternate linear;
+    background: linear-gradient(20deg, #35916d 50%, #ffffff 140%);
     padding: 5px 5%;
     width: 100%;
     position: relative;
     z-index: 100;
 }
 
-@keyframes bg-animation {
-    0% {
-        background-position: right;
-    }
-    100% {
-        background-position: left;
-    }
-}
 .main_logo{
-    width: 160px;
+    width: 5rem;
     margin-right: 40px;
     cursor: pointer;
 }
@@ -170,19 +160,6 @@ button {
     color: orangered;
     cursor: pointer;
 }
-.shortcuts{
-    text-decoration: none;
-    align-items: center;
-    color: #333333;
-    padding-block: 2rem;
-}
-.shortcuts video{
-    width: 100%;
-    align-items: center;
-    border-radius: 2px;
-    border: #333333 solid 2px;
-    box-shadow: 0 0 5px;
-}
 
 .side-title{
     display: flex;
@@ -292,17 +269,18 @@ button {
 .all-story{
     position: relative;
     display: grid;
-    width: 100%;
+    grid-auto-flow: row;
+    grid-auto-columns: 1fr;
+    justify-content: center;
     background-image: radial-gradient(transparent, #ffffff62);
     place-items: center;
     border-radius: 5px;
-    padding: 5px;
-    
+    perspective: 50cm;
+    perspective-origin: center;
 }
 
 .slide{
-    box-shadow: 0 0 20px;
-    margin: 0 20px;    
+    box-shadow: 0 0 20px;    
     height: 20rem;
     display: flex;
     align-items: flex-start;
@@ -310,19 +288,16 @@ button {
     border: #333333 solid 2px;
     scale: 80%;
     transition: 500ms ease-out;
-
-}
-.slide:active{
-    cursor: grabbing;
+    
 }
 .slide:hover {
     box-shadow: 0 30px 30px;
-    rotate: x 40deg;
+    rotate: x 30deg;
     
 }
 .slide:hover.slide img{
-    transform: translateY(-50px) translateZ(20px);
-    scale: 1.1;
+    transform: translateY(-50px);
+    rotate: x -30deg;
     opacity: 1;
 }
 .slide::before{
@@ -337,25 +312,6 @@ button {
 .slide:hover::before{
     opacity: 1;
 }
-.slider{
-    display: grid;
-    grid-auto-flow: column;
-    grid-auto-columns: 30%;
-    gap: 20px;
-    animation: scroll 40s infinite linear alternate;
-}
-.slider:hover {
-    animation-play-state: paused;   
-}
-
-@keyframes scroll {
-    0% {
-        transform: translateX(calc(120px*7.5));
-    }
-    100% {
-        transform: translateX(calc(-200px*13));
-    }
-}
 
 .slide{
     width: 100%;
@@ -363,10 +319,9 @@ button {
     background-position: center;
     background-size: cover;
     border-radius: 10px;
-    perspective: 1000px;
 }
 .first{
-    background-image: linear-gradient(transparent, rgba(0,0,0,0.5)), url('Images/first arc.jpg');
+    background-image: linear-gradient(transparent, rgba(0,0,0,0.5)), url('');
 }
 
 .second{
@@ -379,34 +334,6 @@ button {
 
 .fourth{
     background-image: linear-gradient(transparent, rgba(0,0,0,0.5)), url('Images/fourth arc.jpg');
-}
-
-.fifth{
-    background-image: linear-gradient(transparent, rgba(0,0,0,0.5)), url('Images/fifth arc.jpg');
-}
-
-.sixth{
-    background-image: linear-gradient(transparent, rgba(0,0,0,0.5)), url('Images/sixth arc.jpg');
-}
-
-.seventh{
-    background-image: linear-gradient(transparent, rgba(0,0,0,0.5)), url('Images/seventh arc.jpg');
-}
-
-.eighth{
-    background-image: linear-gradient(transparent, rgba(0,0,0,0.5)), url('Images/eighth arc.jpg');
-}
-
-.ninth{
-    background-image: linear-gradient(transparent, rgba(0,0,0,0.5)), url('Images/ninth arc.jpg');
-}
-
-.tenth{
-    background-image: linear-gradient(transparent, rgba(0,0,0,0.5)), url('Images/tenth arc.jpg');
-}
-
-.eleventh{
-    background-image: linear-gradient(transparent, rgba(0,0,0,0.5)), url('Images/eleventh arc.jpg');
 }
 
 .slide img{
@@ -643,13 +570,6 @@ span{
     .info ul li img{
         display: block;
     }
-    .shortcuts{
-        position: absolute;
-        padding-block: 0;
-        opacity: 0;
-        top: 0;
-        transition: all 500ms ease-in-out 500ms;
-    }
     .left-side:hover,
     .left-side:focus-within{
         transform: translateX(0);
@@ -667,6 +587,10 @@ span{
     }
     #Ethics{
         background-position-x: 60%;
+    }
+    .all-story{
+        grid-auto-columns: calc((100% / 2) - 9px);
+        overflow-x: scroll;
     }
 
 }

@@ -6,9 +6,10 @@
     scroll-behavior: smooth;
 }
 
-body{
+main{
     background: linear-gradient(20deg, #ffffff62 -140%, #35916d 50%, #ffffff 140%);
-    background-attachment: fixed;  
+    background-attachment: fixed;
+    margin-bottom: 20rem;
 }
 
 nav{

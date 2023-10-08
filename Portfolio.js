@@ -1,3 +1,11 @@
+// preload=====================================================
+
+const preload = document.getElementById('preloader');
+
+window.addEventListener('load', () => {
+    preload.style.display = 'none';
+})
+
 // photo fade==================================================
 
 const photoFade = document.querySelectorAll('.picture-fade');

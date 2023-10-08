@@ -408,9 +408,8 @@ iframe{
 .my-information{
     position: relative;
     padding: 60px 20px;
-    background: #ffffff;
     opacity: .5;
-    border-radius: 1rem;
+    border-radius: .2rem;
     margin: 20px 0;
     font-size: clamp(.8rem, 2vw, 1rem);
     width: clamp(40%, 80vw, 100%);
@@ -422,6 +421,10 @@ iframe{
     min-height: 100vh;
     justify-content: center;
     text-align: center;
+}
+
+.my-information:nth-child(even){
+    background: #ffffff;
 }
 .home h3,
 .gallery h3,
@@ -439,24 +442,14 @@ iframe{
 #Ethics{
     position: relative;
 }
-#story{
-    background: url('Images/ussop bg.jpg');
-    background-attachment: fixed;
-    background-size: cover;
-    background-repeat: no-repeat;
-}
+
 .my-story,
 .about-me{
     position: absolute;
     line-height: 1.8;
     width: 50%;
 }
-#Ethics{
-    background: url('Images/774813.jpg');
-    background-attachment: fixed;
-    background-size: cover;
-    background-repeat: no-repeat;
-}
+
 .left-side,
 .right-side,
 .my-information{

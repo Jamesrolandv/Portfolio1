@@ -582,6 +582,9 @@ span{
     #Ethics{
         background-position-x: 60%;
     }
+    .right-side{
+        width: 90%;
+    }
     .photo-container{
         width: 100%;
     }

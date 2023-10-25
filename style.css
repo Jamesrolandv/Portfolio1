@@ -20,8 +20,7 @@ body{
     background: #111;
 }
 main{
-    background: linear-gradient(20deg, #ffffff62 -140%, #35916d 50%, #ffffff 140%);
-    background-attachment: fixed;
+    background: #333;
     margin-bottom: 20rem;
 }
 
@@ -529,7 +528,7 @@ span{
     .left-side{
         z-index: 90;
         position: fixed;
-        width: 50%;
+        width: 200px;
         height: 100%;
         top: 0;
         right: 0;
@@ -557,6 +556,7 @@ span{
         padding-left: 5px;
         padding-block: 2px;
         border-bottom: 1px solid #11111165;
+        width: 100%;
     }
     .info ul li a img{
         display: none;

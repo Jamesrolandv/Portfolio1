@@ -17,7 +17,8 @@
     text-align: center;
 }
 body{
-    background: #111;
+    background: #333;
+    overflow: hidden;
 }
 main{
     background: #333;
@@ -28,7 +29,6 @@ nav{
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background: linear-gradient(20deg, #35916d 50%, #ffffff 140%);
     padding: 5px 5%;
     width: 100%;
     position: relative;
@@ -67,7 +67,7 @@ nav{
     align-items: center;
     justify-content: space-between;
     width: 100%;
-    background: #333333;
+    background: #333;
     position: sticky;
     top: 0;
     z-index: 1;
@@ -312,7 +312,7 @@ iframe{
     cursor: pointer;
     border: #333333 solid 2px;
     scale: 75%;
-    transition: 500ms ease-out;    
+    transition: 200ms ease-out;    
 }
 .slide:hover {
     box-shadow: 0 0 30px; 
@@ -358,43 +358,6 @@ iframe{
 .slide:hover.slide p{
     transform: translateY(-50px) translateZ(20px);
     scale: 1.5;
-}
-.more{
-    position: relative;
-    display: flex;
-    background: rgb(61, 61, 145);
-    border: 5px dashed white;
-    z-index: 0;
-    justify-content: center;
-    border-radius: 5px;
-    overflow: hidden;
-}
-.more::after{
-    content: '';
-    width: 100%;
-    height: 100%;
-    left: 0;
-    top: 0;
-    position: absolute;
-    background: yellow;
-    transform: translateX(50%);
-    transition: all 500ms ease-in-out;
-    z-index: -1;
-}
-.more:hover::after{
-    transform: translateX(0);
-}
-.more a{
-    display: flex;
-    text-decoration: none;
-    color: white;
-    background-color: orangered;
-    font-size: 1rem;
-    font-weight: 500;
-    cursor: pointer;
-    align-items: center;
-    padding: 5px;
-    z-index: 1;
 }
 
 .my-information{

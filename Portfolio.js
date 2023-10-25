@@ -1,8 +1,8 @@
 // preload=====================================================
 
 const preload = document.getElementById('preloader');
-
 window.addEventListener('load', () => {
+    document.querySelector('body').style.overflow = 'auto';
     preload.style.display = 'none';
 })
 

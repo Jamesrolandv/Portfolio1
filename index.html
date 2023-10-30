@@ -33,7 +33,6 @@
 			<div class="nav-user online">
 				<img src="Images\IMG_5126.JPG" alt="Owner">
 			</div>
-		
 		</div>
 	</nav>
 
@@ -48,7 +47,7 @@
 					<li><a href="#Skill">My Skills</a></li>
 					<li><a href="#Ethics">About Me</a></li>
 					<li><a href="#Work">My Samples Projects</a></li>
-					<li><a href="#Activities">My Contact</a></li>
+					<li><a href="#contact">My Contact</a></li>
 				</ul>					
 			</div>
 		</section>
@@ -143,6 +142,32 @@
 		</aside>
 	</main>
 
+	<footer>
+		<div class="contact-form" id="contact">
+			<form action="/contact.php" method="post">
+				<div class="info">
+					<label for="username">Username:</label>
+					<input type="text" id="username" />
+				</div>
+				<div class="info">
+					<label for="email">Email:</label>
+					<input type="email" name="email" id="email" />
+				</div>
+				<div class="info">
+					<label for="phone">Phone Number:</label>
+					<input type="number" name="phone" id="phone" />
+				</div>
+				<div class="info">
+					<label for="comment">Comment Here:</label>
+					<textarea name="comment" id="comment" cols="30" rows="10"></textarea>
+				</div>
+				<div class="info">
+					<button type="submit" id="submit" name="submit">Post</button>
+				</div>
+				
+			</form>
+		</div>
+	</footer>
 	<script src="Portfolio.js"></script>
 </body>
 </html>

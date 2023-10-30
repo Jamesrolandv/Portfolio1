@@ -167,7 +167,7 @@ nav{
     display: none;
 }
 
-button {
+.close{
     border: none;
     background: transparent;
     color: orangered;
@@ -453,6 +453,17 @@ span{
 }
 #photos{
     padding-bottom: 2rem;
+}
+footer{
+    display: flex;
+    justify-content: center;
+}
+form{
+    color: aliceblue;
+}
+form .info{
+    display: flex;
+    justify-content: space-between;
 }
 
 @media all and (max-width: 900px) {

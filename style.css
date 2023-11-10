@@ -17,11 +17,11 @@
     text-align: center;
 }
 body{
-    background: #333;
+    background-image: linear-gradient(to top, #c1dfc4 0%, #deecdd 100%);
     overflow: hidden;
 }
 main{
-    background: #333;
+    background-image: linear-gradient(to top, #c1dfc4 0%, #deecdd 100%);
     margin-bottom: 20rem;
 }
 
@@ -39,6 +39,8 @@ nav{
     width: 5rem;
     margin-right: 40px;
     cursor: pointer;
+    position: fixed;
+    transition: 500ms ease-in-out;
 }
 .left, .right{
     display: flex;

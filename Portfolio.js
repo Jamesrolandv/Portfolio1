@@ -5,7 +5,14 @@ window.addEventListener('load', () => {
     document.querySelector('body').style.overflow = 'auto';
     preload.style.display = 'none';
 })
-
+// when scroll ================================================
+const scrollDown = () => {
+    if(window.scrollY > 0) {
+        const img = document.querySelector('.main_logo');
+        console.log(img);
+    }
+}
+scrollDown();
 // photo fade==================================================
 
 const photoFade = document.querySelectorAll('.picture-fade');

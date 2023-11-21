@@ -14,24 +14,6 @@ const scrollDown = () => {
 }
 scrollDown();
 
-// message sending=============================================
-// const btn = document.querySelector('#btn');
-// btn.addEventListener('click', (e) => {
-//     e.preventDefault();
-//     Email.send({
-//         Host : "smtp.elasticemail.com",
-//         Username : "vedanajamesroland@gmail.com",
-//         Password : "7767687C2AF260C35D7E8D18C9E70635A241",
-//         To : 'vedanajamesroland@gmail.com',
-//         From : "vedanajamesroland@gmail.com",
-//         Subject : "New Message",
-//         Body : "Name: " + document.getElementById('name').value
-//                 + "<br> Email: " + document.getElementById('email').value
-//                 + "<br> Message: " + document.getElementById('msg').value
-//     }).then(
-//       message => alert('Message Sent!')
-//     )
-// })
 // photo fade==================================================
 
 const photoFade = document.querySelectorAll('.picture-fade');

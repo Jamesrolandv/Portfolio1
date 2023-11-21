@@ -17,157 +17,37 @@
 	<link rel="stylesheet" href="style.css">
 </head>
 <body>
-	<div id="preloader">
-		<h2>Waiting...</h2>
-	</div>
-	<nav>
-		<div class="left">
-			<img src="Images/logo-no-background.png" class="main_logo">
-			<ul>
-				<li><img src="Images\icons gmail-200.png" alt="gmail" title="Gmail Account"></li>
-				<li><a href="https://www.facebook.com/semajanne/"><img src="Images\icons facebook-200.png" alt="Facebook" title="Facebook Account"></a></li>
-				<li><img src="Images\icons facebook-messenger-200.png" alt="Messenger" title="Messenger Account"></li>
-			</ul>	
- 		</div>
-		<div class="right">
-			<div class="nav-user online">
-				<img src="Images\IMG_5126.JPG" alt="Owner">
+	<main>
+		<header>
+			<div class="logo">
+				<img src="Images/logo-no-background.png" id="myLogo" alt="My Logo">
 			</div>
-		</div>
-	</nav>
-
-
-	<main class="container">
-	<!--------------------left-side----------------------->
-		<section class="left-side">
-			<div class="info">
-				<ul>
-					<li><a href="#home">Home</a></li>
-					<li><a href="#story">My Story</a></li>
-					<li><a href="#Skill">My Skills</a></li>
-					<li><a href="#Ethics">About Me</a></li>
-					<li><a href="#Work">My Samples Projects</a></li>
-					<li><a href="#contact">My Contact</a></li>
-				</ul>					
-			</div>
-		</section>
-
-	<!--------------------main-content----------------------->
-		<section class="main-content" id="Work">
-			<div class="all-story" id="slide-track">
-					<div class="slide">
-						<a href="https://jamesrolandv.github.io/Training-1/">
-							<iframe src="https://jamesrolandv.github.io/Training-1/" frameborder="0"></iframe>
-							<div class="overlay"></div>
-							<div class="overlay2"></div>
-							<img src="Images/numinix.png" alt="">
-						</a>
-					</div>
-					<div class="slide">
-						<a href="https://jamesrolandv.github.io/Mergalo/">
-							<iframe src="https://jamesrolandv.github.io/Mergalo/" frameborder="0"></iframe>
-							<div class="overlay"></div>
-							<div class="overlay2"></div>
-							<img src="Images/MERGALO.png" alt="">
-						</a>
-					</div>
-					<div class="slide">
-						<a href="https://onepiece.fandom.com/wiki/Story_Arcs#Sky_Island_Saga">
-							<div class="overlay"></div>
-							<div class="overlay2"></div>
-							<img src="Images/drebel logo.png" alt="">
-						</a>
-					</div>
-					<div class="slide">
-						<a href="https://onepiece.fandom.com/wiki/Story_Arcs#Water_7_Saga">
-							<div class="overlay"></div>
-							<div class="overlay2"></div>
-							<img src="Images/Satura logo.png" alt="">
-						</a>
-					</div>
-			</div>
-			<div class="my-information" id="home">
-				<h3>My <span>Home</span></h3>
-				<p>Hi! I'm James Roland S. Vedaña a Front-End Web Developer based on the Philippines.</p>
-			</div>
-
-
-			<div class="my-information" id="story">
-				<div class="my-story">
-					<h3>My <span>Story</span></h3>
-					<p>I was a graduate of Bachelor of Science in Hotel and Restaurant Management, I transitioned in Web Developing to broaden my knowledge and understanding in our advancing world. I may be an HRM graduate but having friends who specialize in Web Developing from Front-End to Back-End changed my perspective, that is why i became a Web Developer and it is working perfectly fine. I execute and deliver the best of my ability and to never dissappoint my clients.</p>
-				</div>
-			</div>
-
-
-			<div class="my-information" id="Skill">
-				<h3>My <span>Skills</span></h3>
-				<p>This are my sets of skills based on my studies in Web Developing.</p>
-				<ul>
-					<li>HTML</li>
-					<li>CSS</li>
-					<li>Javascript</li>
-					<li>Jquery</li>
-					<li>Ajax</li>
-					<li>Sass</li>
-					<li>Vs Code</li>
-					<li>React</li>
+			<nav>
+				<ul class="nav-list">
+					<li><a href="#home" class="nav-items">Home</a></li>
+					<li><a href="#story" class="nav-items">My Story</a></li>
+					<li><a href="#skill" class="nav-items">My Skills</a></li>
+					<li><a href="#about" class="nav-items">About Me</a></li>
+					<li><a href="#work" class="nav-items">My Work</a></li>
+					<li><a href="#contact" class="nav-items">My Contact</a></li>
 				</ul>
+			</nav>
+			<div class="my-links">
+				<a href="https://www.facebook.com/semajanne" id="links" target="_blank"><img src="Images/facebook.svg" alt=""></a>
+				<a href="https://github.com/Jamesrolandv" id="links" target="_blank"><img src="Images/github.svg" alt=""></a>
+				<a href="" id="links"><img src="Images/gmail.svg" alt=""></a>
 			</div>
-
-			<div class="my-information" id="Ethics">
-				<div class="about-me">
-					<h3><span>About</span> Me</h3>
-					<p>I really like computer, and that's why I am practicing and learning web development, I am always learning and adapting, everyday i gain new knowledge and it really is satisfying when you execute the codes and work perfectly. My goal now is when you hear or see my name, you'll know that I am a Web Developer and I am dependable.</p>
-				</div>
-				
-			</div>
-		</section>
-		
-
-	<!--------------------right-side----------------------->
-		<aside class="right-side">
-			<div class="side-title">
-				<h4>Pictures</h4>
-				<button type="button" class="close">Close</button>
-			</div>
-
-			<div class="photo-container">
-				<img src="Images/pic1.JPG" class="showing picture-fade">
-				<img src="Images/pic2.JPG" class="picture-fade">
-				<img src="Images/pic3.JPG" class="picture-fade">
-				<img src="Images/pic4.JPG" class="picture-fade">
-				<img src="Images/pic5.JPG" class="picture-fade">
-			</div>
+		</header>
+		<aside>
+			<form onsubmit="emailsend() ; reset() ; return false;">
+				<input type="text" id="name" placeholder="Your Name.." name="name">
+				<input type="email" name="email" id="email" placeholder="Your Email..">
+				<textarea name="msg" id="msg" cols="30" rows="10" placeholder="Your Message.."></textarea>
+				<button type="submit" id="btn">Send</button>
+			</form>
 		</aside>
 	</main>
-
-	<footer>
-		<div class="contact-form" id="contact">
-			<form action="/contact.php" method="post">
-				<div class="info">
-					<label for="username">Username:</label>
-					<input type="text" id="username" />
-				</div>
-				<div class="info">
-					<label for="email">Email:</label>
-					<input type="email" name="email" id="email" />
-				</div>
-				<div class="info">
-					<label for="phone">Phone Number:</label>
-					<input type="number" name="phone" id="phone" />
-				</div>
-				<div class="info">
-					<label for="comment">Comment Here:</label>
-					<textarea name="comment" id="comment" cols="30" rows="10"></textarea>
-				</div>
-				<div class="info">
-					<button type="submit" id="submit" name="submit">Post</button>
-				</div>
-				
-			</form>
-		</div>
-	</footer>
+	<script src="https://smtpjs.com/v3/smtp.js"></script>
 	<script src="Portfolio.js"></script>
 </body>
 </html>

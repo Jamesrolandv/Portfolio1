@@ -24,7 +24,7 @@ header{
 }
 nav ul{
     display: flex;
-    gap: 2rem;
+    gap: 3rem;
 }
 nav ul li{
     list-style-type: none;
@@ -32,6 +32,9 @@ nav ul li{
 nav ul li a{
     text-decoration: none;
     color: whitesmoke;
+}
+#links {
+    cursor: pointer;
 }
 .form-message{
     position: fixed;
@@ -55,13 +58,14 @@ form > textarea{
     display: block;
     width: 100%;
     resize: none;
-    border: none;
+    border: 1px solid;
     padding: 1rem;
     margin-bottom: 1rem;
+    background-color: #f5f5f5;
 }
 form{
     width: 50%;
-    background-color: rgb(42, 59, 59);
+    background-color: #e4e4e4;
     padding: 3rem 3rem;
     border-radius: 2px;
 }
@@ -69,5 +73,12 @@ form{
     border: none;
     padding: 1rem;
     border-radius: 2px;
+    background-color: #ff2e00;
+    color: 	#f5f5f5;
+    cursor: pointer;
+    transition: 200ms ease-in-out;
+}
+#btn:hover{
+    background-color: #3d3d3d;
 }
 

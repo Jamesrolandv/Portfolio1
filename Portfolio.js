@@ -13,7 +13,29 @@ const scrollDown = () => {
     }
 }
 scrollDown();
-// message appear==============================================
+
+// message gmail===============================================
+const form = document.querySelector('.form-send');
+function sendMsg(e) {
+    e.preventDefault();
+    let params = {
+        name : document.querySelector('#name').value,
+        email : document.querySelector('#email').value,
+        msg : document.querySelector('#msg').value
+    }; 
+
+    const templateId = "template_mogyxog";
+    const serviceId = "service_vv4bu4l";
+
+    emailjs.send(serviceId, templateId, params)
+        .then(function(response) {
+        alert('Email Sent Succesfully to Gmail!', response.status, response.text);
+        }, function(error) {
+        console.log('FAILED...', error);
+        });
+}
+
+form.addEventListener('submit', sendMsg);
 
 // photo fade==================================================
 

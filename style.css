@@ -3,15 +3,24 @@
     padding: 0%;
     font-family: 'Poppins', Helvetica, Arial;
     box-sizing: border-box;
+    line-height: 1.8;
 }
-main{
+body{
     --max-width: 1450px;
     --padding: 1rem;
-    background: linear-gradient(180deg, #0C141C 0%, rgba(8, 45, 79, 0.70) 100%);
+    background: linear-gradient(180deg, #0C141C 0%, rgba(8, 45, 79, 0.911) 100%);
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
     height: 100vh;
+    position: absolute;
+    width: 100%;
+}
+main{
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translate(-50%);
 }
 header{
     padding: 1rem 5rem;
@@ -35,6 +44,10 @@ nav ul li a{
 }
 #links {
     cursor: pointer;
+    transition: 200ms ease-in-out;
+}
+#links:hover{
+    scale: 1.1;
 }
 .form-message{
     position: fixed;
@@ -82,3 +95,41 @@ form{
     background-color: #3d3d3d;
 }
 
+.hero-section{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 90vh;
+}
+.left-hero{
+    width: 30%;
+}
+.left-hero h2{
+    font-size: 2rem;
+    font-weight: 600;
+    color: #e4e4e4;
+    
+}
+.right-hero{
+
+}
+.right-hero img{
+    width: 30rem;
+}
+.btn{
+    padding: 1rem;
+    width: 12em;
+    border-radius: 5px;
+    cursor: pointer;
+    border: 3px solid #000;
+    background: #F0DB4F;
+    box-shadow: 0px 0px 0px 1px #4151DA;
+    margin-right: 1rem;
+    transition: 250ms ease-in-out;
+}
+.btn:hover{
+    box-shadow: 0px 6px 5px 1px #4151DA;
+    background-color: #3d3d3d;
+    color: #e4e4e4;
+}

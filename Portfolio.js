@@ -17,7 +17,7 @@ scrollDown();
 // message gmail===============================================
 const form = document.querySelector('.form-send');
 function sendMsg(e) {
-    e.preventDefault();
+    e.reset();
     let params = {
         name : document.querySelector('#name').value,
         email : document.querySelector('#email').value,

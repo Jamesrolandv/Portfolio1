@@ -1,32 +1,22 @@
-31
+21
 121C:\Users\semaj\OneDrive\Documents\XAMPP\htdocs\Portfolio\Videos\One Piece Opening 1 HD 720p   Special Edition We Are!.mp4133259688709532799 0
 60C:\Users\semaj\OneDrive\Documents\XAMPP\htdocs\Portfolio\CSS133390941504684535 1
-63C:\Users\semaj\OneDrive\Documents\XAMPP\htdocs\Portfolio\Images133420155623566907 1
-67C:\Users\semaj\OneDrive\Documents\XAMPP\htdocs\Portfolio\index.html133427193511435588 0
-88C:\Users\semaj\OneDrive\Documents\XAMPP\htdocs\Portfolio\Images\icons8-home-page-100.png133259571306250283 0
-69C:\Users\semaj\OneDrive\Documents\XAMPP\htdocs\Portfolio\Portfolio.js133439253223005272 0
-114C:\Users\semaj\OneDrive\Documents\XAMPP\htdocs\Portfolio\Images\46520384_956185147902173_5744430509706969088_n.jpg133393183974530571 0
-66C:\Users\semaj\OneDrive\Documents\XAMPP\htdocs\Portfolio\style.css133439248819341075 0
+63C:\Users\semaj\OneDrive\Documents\XAMPP\htdocs\Portfolio\Images133453103999197504 1
+67C:\Users\semaj\OneDrive\Documents\XAMPP\htdocs\Portfolio\index.html133454782486697893 0
 63C:\Users\semaj\OneDrive\Documents\XAMPP\htdocs\Portfolio\Videos133261282078839033 1
+69C:\Users\semaj\OneDrive\Documents\XAMPP\htdocs\Portfolio\package.json133446148872208373 0
+69C:\Users\semaj\OneDrive\Documents\XAMPP\htdocs\Portfolio\Portfolio.js133455648488496161 0
+66C:\Users\semaj\OneDrive\Documents\XAMPP\htdocs\Portfolio\style.css133455646290740445 0
 79C:\Users\semaj\OneDrive\Documents\XAMPP\htdocs\Portfolio\Images\drebel logo.png133420154888519191 0
+76C:\Users\semaj\OneDrive\Documents\XAMPP\htdocs\Portfolio\Images\facebook.svg133450570938205200 0
 75C:\Users\semaj\OneDrive\Documents\XAMPP\htdocs\Portfolio\Images\favicon.ico133402134855556983 0
-85C:\Users\semaj\OneDrive\Documents\XAMPP\htdocs\Portfolio\Images\icons8-compass-50.png133261350019325243 0
-86C:\Users\semaj\OneDrive\Documents\XAMPP\htdocs\Portfolio\Images\icons facebook-200.png133259220280000000 0
-96C:\Users\semaj\OneDrive\Documents\XAMPP\htdocs\Portfolio\Images\icons facebook-messenger-200.png133259509907082386 0
-83C:\Users\semaj\OneDrive\Documents\XAMPP\htdocs\Portfolio\Images\icons gmail-200.png133259508014903345 0
-72C:\Users\semaj\OneDrive\Documents\XAMPP\htdocs\Portfolio\Images\pic2.JPG133390878946601949 0
-85C:\Users\semaj\OneDrive\Documents\XAMPP\htdocs\Portfolio\Images\icons8-camera-100.png133259579790917599 0
-93C:\Users\semaj\OneDrive\Documents\XAMPP\htdocs\Portfolio\Images\icons8-video-playlist-100.png133259583331881275 0
-76C:\Users\semaj\OneDrive\Documents\XAMPP\htdocs\Portfolio\Images\IMG_5126.JPG133393194264755860 0
-86C:\Users\semaj\OneDrive\Documents\XAMPP\htdocs\Portfolio\Images\logo-no-background.png133401855840000000 0
+74C:\Users\semaj\OneDrive\Documents\XAMPP\htdocs\Portfolio\Images\github.svg133450571217348307 0
+73C:\Users\semaj\OneDrive\Documents\XAMPP\htdocs\Portfolio\Images\gmail.svg133450571329040547 0
+86C:\Users\semaj\OneDrive\Documents\XAMPP\htdocs\Portfolio\Images\logo-no-background.png133446176469957682 0
 75C:\Users\semaj\OneDrive\Documents\XAMPP\htdocs\Portfolio\Images\MERGALO.png133412312655153197 0
-74C:\Users\semaj\OneDrive\Documents\XAMPP\htdocs\Portfolio\Images\search.png133259456237813887 0
 75C:\Users\semaj\OneDrive\Documents\XAMPP\htdocs\Portfolio\Images\numinix.png133323252090765120 0
-72C:\Users\semaj\OneDrive\Documents\XAMPP\htdocs\Portfolio\Images\pic1.JPG133393194724573968 0
-72C:\Users\semaj\OneDrive\Documents\XAMPP\htdocs\Portfolio\Images\pic3.JPG133390880134080769 0
-72C:\Users\semaj\OneDrive\Documents\XAMPP\htdocs\Portfolio\Images\pic4.JPG133390880323166514 0
+72C:\Users\semaj\OneDrive\Documents\XAMPP\htdocs\Portfolio\Images\pic1.png133453103659976345 0
+72C:\Users\semaj\OneDrive\Documents\XAMPP\htdocs\Portfolio\Images\pic2.png133453102631501083 0
 79C:\Users\semaj\OneDrive\Documents\XAMPP\htdocs\Portfolio\Images\Satura logo.png133420153940886192 0
-72C:\Users\semaj\OneDrive\Documents\XAMPP\htdocs\Portfolio\Images\pic5.JPG133390880622440401 0
-71C:\Users\semaj\OneDrive\Documents\XAMPP\htdocs\Portfolio\Images\uno.jpg133393195873516624 0
 72C:\Users\semaj\OneDrive\Documents\XAMPP\htdocs\Portfolio\Images\Walk.gif133412269004056879 0
 68C:\Users\semaj\OneDrive\Documents\XAMPP\htdocs\Portfolio\CSS\all.css133240473860000000 0

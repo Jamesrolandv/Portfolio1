@@ -25,27 +25,28 @@
 	</script>
 </head>
 <body>
+	<header>
+		<div class="logo">
+			<a href="#"><img src="Images/logo-no-background.png" id="myLogo" alt="My Logo"></a>
+		</div>
+		<nav>
+			<ul class="nav-list">
+				<li><a href="#home" class="nav-items">Home</a></li>
+				<li><a href="#story" class="nav-items">My Story</a></li>
+				<li><a href="#skill" class="nav-items">My Skills</a></li>
+				<li><a href="#about" class="nav-items">About Me</a></li>
+				<li><a href="#work" class="nav-items">My Work</a></li>
+				<li><a href="#contact" class="nav-items">My Contact</a></li>
+			</ul>
+		</nav>
+		<div class="my-links">
+			<a href="https://www.facebook.com/semajanne" target="_blank"><img src="Images/facebook.svg" id="links" alt=""></a>
+			<a href="https://github.com/Jamesrolandv" target="_blank"><img src="Images/github.svg" id="links" alt=""></a>
+			<label for="gmail"><img src="Images/gmail.svg" id="links"alt=""></label>
+		</div>
+	</header>
 	<main>
-		<header>
-			<div class="logo">
-				<img src="Images/logo-no-background.png" id="myLogo" alt="My Logo">
-			</div>
-			<nav>
-				<ul class="nav-list">
-					<li><a href="#home" class="nav-items">Home</a></li>
-					<li><a href="#story" class="nav-items">My Story</a></li>
-					<li><a href="#skill" class="nav-items">My Skills</a></li>
-					<li><a href="#about" class="nav-items">About Me</a></li>
-					<li><a href="#work" class="nav-items">My Work</a></li>
-					<li><a href="#contact" class="nav-items">My Contact</a></li>
-				</ul>
-			</nav>
-			<div class="my-links">
-				<a href="https://www.facebook.com/semajanne" id="links" target="_blank"><img src="Images/facebook.svg" alt=""></a>
-				<a href="https://github.com/Jamesrolandv" id="links" target="_blank"><img src="Images/github.svg" alt=""></a>
-				<label for="gmail"><img src="Images/gmail.svg" id="links"alt=""></label>
-			</div>
-		</header>
+		
 		<input type="checkbox" name="gmail" id="gmail" checked>
 		<div class="form-message">
 			<form class="form-send" action="#" method="post">
@@ -55,6 +56,22 @@
 				<button type="submit" id="btn">Send to Gmail</button>
 			</form>
 		</div>
+
+		<section class="hero-section">
+			<div class="left-hero">
+				<h2>hi! I’m James Roland
+					<span id="designed-words">Front-End</span> Web Developer
+					based from 
+					the Philippines.</h2>
+				<button type="button" class="btn">Get Connected</button>
+				<button type="button" class="btn">CV Resume</button>
+			</div>
+			<div class="right-hero">
+				<img src="Images/pic1.png" alt="">
+			</div>
+		</section>
+
+		<section class="story-section"></section>
 	</main>
 	<script src="Portfolio.js"></script>
 </body>

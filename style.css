@@ -96,23 +96,38 @@ form{
 }
 
 .hero-section{
+    position: relative;
     display: flex;
-    justify-content: center;
+    
     align-items: center;
     width: 100vw;
     height: 90vh;
+    transition: 250ms ease-in-out;
 }
 .left-hero{
-    width: 30%;
+    margin-left: 0;
+    opacity: 0;
+    transition: 800ms ease-in-out;
+}
+.left-hero.left-slide{
+    margin-left: 20rem;
+    opacity: 1;
 }
 .left-hero h2{
     font-size: 2rem;
     font-weight: 600;
     color: #e4e4e4;
-    
+    width: 50%;
 }
 .right-hero{
-
+    position: absolute;
+    right: 0;
+    opacity: 0;
+    transition: 800ms ease-in-out;
+}
+.right-hero.right-slide{
+    right: 20rem;
+    opacity: 1;
 }
 .right-hero img{
     width: 30rem;

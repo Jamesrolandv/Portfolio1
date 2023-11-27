@@ -1,18 +1,18 @@
 // preload=====================================================
 
-const preload = document.getElementById('preloader');
-window.addEventListener('load', () => {
-    document.querySelector('body').style.overflow = 'auto';
-    preload.style.display = 'none';
-})
+// const preload = document.getElementById('preloader');
+// window.addEventListener('load', () => {
+//     document.querySelector('body').style.overflow = 'auto';
+//     preload.style.display = 'none';
+// })
 // when scroll ================================================
-const scrollDown = () => {
-    if(window.scrollY > 0) {
-        const img = document.querySelector('.main_logo');
-        console.log(img);
-    }
-}
-scrollDown();
+// const scrollDown = () => {
+//     if(window.scrollY > 0) {
+//         const img = document.querySelector('.main_logo');
+//         console.log(img);
+//     }
+// }
+// scrollDown();
 
 // message gmail===============================================
 const form = document.querySelector('.form-send');
@@ -39,53 +39,54 @@ form.addEventListener('submit', sendMsg);
 
 // photo fade==================================================
 
-const photoFade = document.querySelectorAll('.picture-fade');
+// const photoFade = document.querySelectorAll('.picture-fade');
 
-let imageIndex = 0;
+// let imageIndex = 0;
 
-const fadePicture = () => {
-    photoFade[imageIndex].classList.remove('showing');
+// const fadePicture = () => {
+//     photoFade[imageIndex].classList.remove('showing');
 
-    imageIndex++;
+//     imageIndex++;
 
-    if(imageIndex >= photoFade.length){
-        imageIndex = 0;
-    }
+//     if(imageIndex >= photoFade.length){
+//         imageIndex = 0;
+//     }
 
-    photoFade[imageIndex].classList.add('showing');
-};
+//     photoFade[imageIndex].classList.add('showing');
+// };
 
-setInterval(fadePicture, 8000);
+// setInterval(fadePicture, 8000);
 
 // close========================================================
 
-const closePhoto = document.querySelector('.close');
-const photoContainer = document.querySelector('.photo-container');
+// const closePhoto = document.querySelector('.close');
+// const photoContainer = document.querySelector('.photo-container');
 
-let closing = true;
-closePhoto.addEventListener('click', () => {
-    if(closing){
-        closePhoto.innerHTML = 'Open';
-        photoContainer.classList.add('open');
-        closing = false;
-    }else{
-        closePhoto.innerHTML = 'Close';
-        photoContainer.classList.remove('open');
-        closing = true;
-    }
-});
+// let closing = true;
+// closePhoto.addEventListener('click', () => {
+//     if(closing){
+//         closePhoto.innerHTML = 'Open';
+//         photoContainer.classList.add('open');
+//         closing = false;
+//     }else{
+//         closePhoto.innerHTML = 'Close';
+//         photoContainer.classList.remove('open');
+//         closing = true;
+//     }
+// });
 // intersection==================================================
 
-const pages = document.querySelectorAll('.my-information');
+const heroSections = document.querySelector('.hero-section');
+const heroLeft = document.querySelector('.left-hero');
+const heroRight = document.querySelector('.right-hero');
 
 let observer = new IntersectionObserver(entries => {
     entries.forEach(entry => {
-        entry.target.classList.toggle('bg-change', entry.isIntersecting)
+        if(entry.isIntersecting){
+            heroLeft.classList.add('left-slide');
+            heroRight.classList.add('right-slide');
+        }
     })
-}, {
-    threshold: .5,
 });
 
-pages.forEach(page => {
-    observer.observe(page);
-});
+observer.observe(heroSections);

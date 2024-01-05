@@ -4,43 +4,78 @@
     font-family: 'Poppins', Helvetica, Arial;
     box-sizing: border-box;
     line-height: 1.8;
+    letter-spacing: 2px;
+}
+html{
+    overflow: hidden;
+    scroll-behavior: smooth;
 }
 body{
     --max-width: 1450px;
     --padding: 1rem;
-    background: linear-gradient(180deg, #0C141C 0%, rgba(8, 45, 79, 0.911) 100%);
+    background: rgb(9,28,46);
+    background: linear-gradient(180deg, rgb(0, 0, 0) 0%, rgba(9,28,46,1) 52%, rgb(0, 0, 0) 100%);
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
-    height: 100vh;
     position: absolute;
     width: 100%;
 }
-main{
-    position: absolute;
-    left: 50%;
-    bottom: 0;
-    transform: translate(-50%);
-}
+
 header{
-    padding: 1rem 5rem;
+    padding: 0 5rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 9999;
+    transition: 250ms ease-in-out;
+}
+header.scrolled{
+    background: #1a1a1a;
 }
 #myLogo{
     width: 100px;
+    cursor: pointer;
+    transition: 250ms ease-in-out;
+}
+#myLogo.shrink{
+    width: 50px;
 }
 nav ul{
     display: flex;
-    gap: 3rem;
 }
 nav ul li{
     list-style-type: none;
+    position: relative;
+    overflow: hidden;
+    text-align: center;
+    padding: 1rem;
 }
-nav ul li a{
+.nav-items{
     text-decoration: none;
     color: whitesmoke;
+    padding: 1rem;
+    font-size: clamp(.8rem, 1vw, 1rem);
+    position: relative;
+}
+.nav-items::before{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-image: url("Images/highlight.png");
+    background-repeat: no-repeat;
+    background-size: 100% 2rem;
+    transition: 300ms;
+    left: 0;
+    scale: 0 1;
+    z-index: -1;
+}
+.nav-items.active::before{
+    scale: 1 1;
 }
 #links {
     cursor: pointer;
@@ -55,10 +90,16 @@ nav ul li a{
     justify-content: center;
     align-items: center;
     width: 100%;
-    z-index: 100;
+    z-index: 1;
     transition: 400ms ease-in-out;
     transform-origin: top right;
 
+}
+i[class="fa fa-times"]{
+    display: flex;
+    justify-content: end;
+    padding-bottom: 1rem;
+    cursor: pointer;
 }
 input[name="gmail"]{
     display: none;
@@ -95,22 +136,24 @@ form{
     background-color: #3d3d3d;
 }
 
-.hero-section{
+.hero-section,
+.story-section,
+.skill-section{
     position: relative;
     display: flex;
-    
+    justify-content: center;
     align-items: center;
-    width: 100vw;
-    height: 90vh;
+    min-height: 100vh;
     transition: 250ms ease-in-out;
 }
+
 .left-hero{
-    margin-left: 0;
+    margin-left: -20rem;
     opacity: 0;
     transition: 800ms ease-in-out;
 }
 .left-hero.left-slide{
-    margin-left: 20rem;
+    margin-left: 0;
     opacity: 1;
 }
 .left-hero h2{
@@ -119,18 +162,38 @@ form{
     color: #e4e4e4;
     width: 50%;
 }
+#designed-words{
+    text-decoration: underline;
+    color: #F0DB4F;
+    animation: animateWords 3s alternate infinite;
+}
+@keyframes animateWords {
+    from {color: #F0DB4F;}
+    to {color: mediumseagreen;}
+}
 .right-hero{
     position: absolute;
     right: 0;
+    top: 3rem;
     opacity: 0;
     transition: 800ms ease-in-out;
+    width: 30%;
+}
+.moving-img{
+    position: absolute;
+    opacity: 0;
+    transition: 4s ease-in-out;
+}
+.moving-img.showing{
+    opacity: 1;
 }
 .right-hero.right-slide{
     right: 20rem;
     opacity: 1;
 }
-.right-hero img{
-    width: 30rem;
+
+.buttons{
+    padding-top: 2rem;
 }
 .btn{
     padding: 1rem;
@@ -142,7 +205,10 @@ form{
     box-shadow: 0px 0px 0px 1px #4151DA;
     margin-right: 1rem;
     transition: 250ms ease-in-out;
+    color: #000;
+    text-decoration: none;
 }
+
 .btn:hover{
     box-shadow: 0px 6px 5px 1px #4151DA;
     background-color: #3d3d3d;

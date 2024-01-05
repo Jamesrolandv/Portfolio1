@@ -31,7 +31,7 @@
 		</div>
 		<nav>
 			<ul class="nav-list">
-				<li><a href="#home" class="nav-items">Home</a></li>
+				<li><a href="#home" class="nav-items active">Home</a></li>
 				<li><a href="#story" class="nav-items">My Story</a></li>
 				<li><a href="#skill" class="nav-items">My Skills</a></li>
 				<li><a href="#about" class="nav-items">About Me</a></li>
@@ -50,6 +50,7 @@
 		<input type="checkbox" name="gmail" id="gmail" checked>
 		<div class="form-message">
 			<form class="form-send" action="#" method="post">
+				<label for="gmail"><i class="fa fa-times"></i></label>
 				<input type="text" id="name" placeholder="Your Name.." name="name" required>
 				<input type="email" name="email" id="email" placeholder="Your Email.." required>
 				<textarea name="msg" id="msg" cols="30" rows="10" placeholder="Your Message.." required></textarea>
@@ -57,25 +58,34 @@
 			</form>
 		</div>
 
-		<section class="hero-section">
+		<section class="hero-section" id="home">
 			<div class="left-hero">
-				<h2>hi! I’m James Roland
+				<h2>Hi! I’m James Roland
 					<span id="designed-words">Front-End</span> Web Developer
 					based from 
 					the Philippines.</h2>
-				<button type="button" class="btn">Get Connected</button>
-				<button type="button" class="btn">CV Resume</button>
+				<section class="buttons">
+					<label for="gmail" class="btn">Get Connected</label>
+					<a href="files/jamesv.pdf" download class="btn">CV Resume</a>
+				</section>
+				
 			</div>
 			<div class="right-hero">
-				<img src="Images/pic1.png" alt="">
-				<div class="background-animation">
-					
+				<div class="bg-animation">
+					<div class="bg1"></div>
+					<div class="bg2"></div>
 				</div>
+				<img src="Images/pic1.png" alt="" class="moving-img showing">
+				<img src="Images/pic2.png" alt="" class="moving-img">
 			</div>
 		</section>
 
-		<section class="story-section"></section>
+		<section class="story-section" id="story"></section>
+		<section class="skill-section" id="skill"></section>
+		<section class="about-section" id="about"></section>
+		<section class="work-section" id="work"></section>
+		<section class="contact-section" id="contact"></section>
 	</main>
-	<script src="Portfolio.js"></script>
+	<script defer src="Portfolio.js"></script>
 </body>
 </html>

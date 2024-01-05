@@ -6,13 +6,20 @@
 //     preload.style.display = 'none';
 // })
 // when scroll ================================================
-// const scrollDown = () => {
-//     if(window.scrollY > 0) {
-//         const img = document.querySelector('.main_logo');
-//         console.log(img);
-//     }
-// }
-// scrollDown();
+const scrollDown = () => {
+    document.addEventListener('scroll', () => {
+        const img = document.querySelector('#myLogo');
+        const header = document.querySelector('header');
+        if(window.scrollY > 0) {
+            img.classList.add('shrink');
+            header.classList.add('scrolled');   
+        }else{
+            img.classList.remove('shrink');
+            header.classList.remove('scrolled'); 
+        };
+    })
+}
+scrollDown();
 
 // message gmail===============================================
 const form = document.querySelector('.form-send');
@@ -39,23 +46,23 @@ form.addEventListener('submit', sendMsg);
 
 // photo fade==================================================
 
-// const photoFade = document.querySelectorAll('.picture-fade');
+const photoFade = document.querySelectorAll('.moving-img');
 
-// let imageIndex = 0;
+let imageIndex = 0;
 
-// const fadePicture = () => {
-//     photoFade[imageIndex].classList.remove('showing');
+const fadePicture = () => {
+    photoFade[imageIndex].classList.remove('showing');
 
-//     imageIndex++;
+    imageIndex++;
 
-//     if(imageIndex >= photoFade.length){
-//         imageIndex = 0;
-//     }
+    if(imageIndex >= photoFade.length){
+        imageIndex = 0;
+    }
 
-//     photoFade[imageIndex].classList.add('showing');
-// };
+    photoFade[imageIndex].classList.add('showing');
+};
 
-// setInterval(fadePicture, 8000);
+setInterval(fadePicture, 8000);
 
 // close========================================================
 
@@ -90,3 +97,29 @@ let observer = new IntersectionObserver(entries => {
 });
 
 observer.observe(heroSections);
+
+// nav links====================================================
+const sections = document.querySelectorAll('section');
+const navLinks = document.querySelectorAll('.nav-items');
+
+window.onscroll = () => {
+    sections.forEach(section => {
+        let top = window.scrollY;
+        let offset = section.offsetTop - 100;
+        let height = section.offsetHeight;
+        let id = section.getAttribute('id');
+
+        if(top >= offset && top < offset + height){
+            navLinks.forEach(link => {
+                link.classList.remove('active');
+                document.querySelector('header nav ul li a[href*= ' + id + ']').classList.add('active');
+            });
+        };
+    });
+};
+// navLinks.forEach(link => {
+//     link.addEventListener('click', () => {
+//         document.querySelector('.active')?.classList.remove('active');
+//         link.classList.add('active'); 
+//     })
+// })

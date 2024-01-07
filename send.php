@@ -2,6 +2,8 @@
 
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception;
+use PHPMailer\PHPMailer\SMTP;
+
 require 'phpmailer/src/Exception.php';
 require 'phpmailer/src/PHPMailer.php';
 require 'phpmailer/src/SMTP.php';
@@ -13,9 +15,9 @@ if(isset($_POST['send'])){
     $mail->Host = 'stmp.gmail.com';
     $mail->SMTPAuth = true;
     $mail->Username = 'vedanajamesroland@gmail.com';
-    $mail->Password = 'gfkqcooblvwagixm';
+    $mail->Password = 'gfkq coob lvwa gixm';
     $mail->SMTPSecure = 'ssl';
-    $mail->Port = 456;
+    $mail->Port = 3306;
     $mail->setFrom('vedanajamesroland@gmail.com');
     $mail->addAddress($_POST['email']);
     $mail->isHTML(true);

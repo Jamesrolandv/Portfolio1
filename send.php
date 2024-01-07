@@ -30,7 +30,12 @@ try {
     $mail->Body    = $_POST['msg'];
 
     $mail->send();
-    echo 'Message has been sent';
+    echo '
+    <script>
+        alert("Message Sent");
+    </script>
+    
+    ';
 } catch (Exception $e) {
     echo "Message could not be sent. Mailer Error: {$mail->ErrorInfo}";
 }

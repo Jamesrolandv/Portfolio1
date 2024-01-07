@@ -8,8 +8,9 @@ require 'phpmailer/src/Exception.php';
 require 'phpmailer/src/PHPMailer.php';
 require 'phpmailer/src/SMTP.php';
 
-if(isset($_POST['send'])){
-    $mail = new PHPMailer(true);
+$mail = new PHPMailer(true);
+
+try {
     //Server settings
     $mail->isSMTP();                                            //Send using SMTP
     $mail->Host       = 'smtp.gmail.com';                     //Set the SMTP server to send through

@@ -6,43 +6,43 @@
 //     preload.style.display = 'none';
 // })
 // when scroll ================================================
-const scrollDown = () => {
-    document.addEventListener('scroll', () => {
-        const img = document.querySelector('#myLogo');
-        const header = document.querySelector('header');
-        if(window.scrollY > 0) {
-            img.classList.add('shrink');
-            header.classList.add('scrolled');   
-        }else{
-            img.classList.remove('shrink');
-            header.classList.remove('scrolled'); 
-        };
-    })
-}
-scrollDown();
+// const scrollDown = () => {
+//     document.addEventListener('scroll', () => {
+//         const img = document.querySelector('#myLogo');
+//         const header = document.querySelector('header');
+//         if(window.scrollY > 0) {
+//             img.classList.add('shrink');
+//             header.classList.add('scrolled');   
+//         }else{
+//             img.classList.remove('shrink');
+//             header.classList.remove('scrolled'); 
+//         };
+//     })
+// }
+// scrollDown();
 
 // message gmail===============================================
-const form = document.querySelector('.form-send');
-function sendMsg(e) {
-    e.reset();
-    let params = {
-        name : document.querySelector('#name').value,
-        email : document.querySelector('#email').value,
-        msg : document.querySelector('#msg').value
-    }; 
+// const form = document.querySelector('.form-send');
+// function sendMsg(e) {
+//     e.reset();
+//     let params = {
+//         name : document.querySelector('#name').value,
+//         email : document.querySelector('#email').value,
+//         msg : document.querySelector('#msg').value
+//     }; 
 
-    const templateId = "template_mogyxog";
-    const serviceId = "service_vv4bu4l";
+//     const templateId = "template_mogyxog";
+//     const serviceId = "service_vv4bu4l";
 
-    emailjs.send(serviceId, templateId, params)
-        .then(function(response) {
-        alert('Email Sent Succesfully to Gmail!', response.status, response.text);
-        }, function(error) {
-        console.log('FAILED...', error);
-        });
-}
+//     emailjs.send(serviceId, templateId, params)
+//         .then(function(response) {
+//         alert('Email Sent Succesfully to Gmail!', response.status, response.text);
+//         }, function(error) {
+//         console.log('FAILED...', error);
+//         });
+// }
 
-form.addEventListener('submit', sendMsg);
+// form.addEventListener('submit', sendMsg);
 
 // photo fade==================================================
 
@@ -89,10 +89,8 @@ const heroRight = document.querySelector('.right-hero');
 
 let observer = new IntersectionObserver(entries => {
     entries.forEach(entry => {
-        if(entry.isIntersecting){
-            heroLeft.classList.add('left-slide');
-            heroRight.classList.add('right-slide');
-        }
+        heroLeft.classList.toggle('left-slide', entry.isIntersecting);
+        heroRight.classList.toggle('right-slide', entry.isIntersecting);
     })
 });
 

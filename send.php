@@ -22,7 +22,8 @@ try {
 
     //Recipients
     $mail->setFrom($_POST['email'], $_POST['name']);
-    $mail->addAddress('vedanajamesroland@gmail.com');     //Add a recipient
+    $mail->addAddress('vedanajamesroland@gmail.com');
+    $mail->addReplyTo($_POST['email'], $_POST['name']);
 
     //Content
     $mail->isHTML(true);

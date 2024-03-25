@@ -32,6 +32,7 @@ try {
 
     $mail->send();
     echo '
+    Go back to previous page.
     <script>
         alert("Message Sent");
     </script>

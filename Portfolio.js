@@ -64,23 +64,6 @@ const fadePicture = () => {
 
 setInterval(fadePicture, 8000);
 
-// close========================================================
-
-// const closePhoto = document.querySelector('.close');
-// const photoContainer = document.querySelector('.photo-container');
-
-// let closing = true;
-// closePhoto.addEventListener('click', () => {
-//     if(closing){
-//         closePhoto.innerHTML = 'Open';
-//         photoContainer.classList.add('open');
-//         closing = false;
-//     }else{
-//         closePhoto.innerHTML = 'Close';
-//         photoContainer.classList.remove('open');
-//         closing = true;
-//     }
-// });
 // intersection==================================================
 
 const heroSections = document.querySelector('.hero-section');
@@ -92,6 +75,8 @@ let observer = new IntersectionObserver(entries => {
         heroLeft.classList.toggle('left-slide', entry.isIntersecting);
         heroRight.classList.toggle('right-slide', entry.isIntersecting);
     })
+}, {
+    threshold: .8
 });
 
 observer.observe(heroSections);
